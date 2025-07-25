@@ -172,11 +172,11 @@ class PersonItemActivity : AppCompatActivity() {
             throw RuntimeException("Unknown screen mode $mode")
         screenMode = mode
 
-        if (screenMode == MODE_EDIT )
+        if (screenMode == MODE_EDIT) {
             if (!intent.hasExtra(EXTRA_PERSON_ITEM_ID))
                 throw RuntimeException("Param EXTRA_PERSON_ITEM_ID is absent")
             personItemId = intent.getIntExtra(EXTRA_PERSON_ITEM_ID, -1)
-
+        }
     }
 
     companion object {
